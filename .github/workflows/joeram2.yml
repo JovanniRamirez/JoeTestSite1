@@ -1,10 +1,10 @@
-name: Build and deploy .NET Core application to Web App joeram1
+name: Build and deploy .NET Core application to Web App joeram2
 on:
   push:
     branches:
     - main
 env:
-  AZURE_WEBAPP_NAME: joeram1
+  AZURE_WEBAPP_NAME: joeram2
   AZURE_WEBAPP_PACKAGE_PATH: JoeTestSite1/published
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 8.0.x
@@ -44,5 +44,5 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        publish-profile: ${{ secrets.joeram1_EBEB }}
+        publish-profile: ${{ secrets.joeram2_BB7C }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
